@@ -1,0 +1,14 @@
+[
+    {
+      "sqlserver": "localhost",
+      "database": "service_dev",
+      "backup_source_file": "D:\\Dumps\\service_dev.bak",
+      "server_external_dir": "D:\\Dumps\\",
+      "server_dir": "D:\\Dumps\\",
+      "program": "C:\\Program Files\\1cv8\\8.3.20.1914\\bin\\1cv8.exe",
+      "server1c": "localhost",
+      "base1c": "service_dev",
+      "outfile": "D:\\Logs\\outfile.txt",
+      "logfile": "D:\\Logs\\logfile.txt"
+    }
+  ]
