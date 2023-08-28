@@ -59,20 +59,19 @@ def main(page):
     # Выбор файла
     pick_files_dialog = ft.FilePicker(on_result=pick_files_result)
     selected_files = ft.Text()
-    page.add(
-        ft.Row(
+    select_task_file_row = ft.Row(
             [
                 ft.ElevatedButton(
                     "Выбери файл с заданием",
                     icon=ft.icons.UPLOAD_FILE,
                     on_click=lambda _: pick_files_dialog.pick_files(
-                        allow_multiple=True
+                        allow_multiple=False
                     ),
                 ),
                 selected_files,
             ]
         )
-    )
+    page.add(select_task_file_row)
     page.overlay.append(pick_files_dialog)
 
     # Чтение из буфера обмена
@@ -87,7 +86,7 @@ def main(page):
         except:
             # Не хочу возиться с алертом.
             pass
-    
+    page.add(ft.Text("        или"))
     page.add(
         ft.ElevatedButton(
             "Прочитать из буфера обмена",
